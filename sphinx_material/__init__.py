@@ -228,7 +228,7 @@ def walk_contents(tags):
 
 def table_fix(body_text, page_name="md-page-root--link"):
     # This is a hack to skip certain classes of tables
-    ignore_table_classes = {"highlighttable", "longtable", "dataframe"}
+    ignore_table_classes = {"highlighttable", "dataframe"}
     try:
         body = BeautifulSoup(body_text, features="html.parser")
         for table in body.select("table"):
